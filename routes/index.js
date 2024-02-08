@@ -7,6 +7,6 @@ console.log('Routes loaded');
 router.get('/', homeController.home);
 router.get('/feedback', homeController.feedback);
 router.post('/create', homeController.create);
-router.get('/projects', homeController.projects);
+// router.get('/projects', homeController.projects);
 
 module.exports = router;
