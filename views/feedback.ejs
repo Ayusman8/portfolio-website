@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/css/feedback.css">
+
+<main onload="changeHeaderElementColor()">
+    <div class="center">
+        <div class="left">
+            <div class="feedback-form-container">
+                <span class="heading">Share Your Feedback</span>
+                <p>Thanks for sending me your ideas, issues, or appreciations cause all are appreciated here and motivates me to get better day by day.</p>
+                <div class="feedback-form">
+                    <form action="/create" method="POST">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="input-box" name="name" required>
+                        <!-- <label for="about">What's your feedback about?</label>
+                        <input type="text" class="input-box" name="about" required> -->
+                        <label for="feedback">Add Details</label>
+                        <textarea name="feedback" id="feedback-details" placeholder="Describe your experience." required></textarea>
+                        <div id="feedback-star-container">
+                            <div id="feedback-star">
+                                <input type="radio" name="rate" id="rate-5" value="I love this 😍">
+                                <label for="rate-5" class="fas fa-star"></label>
+                                <input type="radio" name="rate" id="rate-4" value="I like this 😎">
+                                <label for="rate-4" class="fas fa-star"></label>
+                                <input type="radio" name="rate" id="rate-3" value="Nice, Keep it up 😊">
+                                <label for="rate-3" class="fas fa-star"></label>
+                                <input type="radio" name="rate" id="rate-2" value="It's ok, Need some work! 😐">
+                                <label for="rate-2" class="fas fa-star"></label>
+                                <input type="radio" name="rate" id="rate-1" value="I don't like this 😒">
+                                <label for="rate-1" class="fas fa-star"></label>
+                            </div>
+                        </div>
+                        <button type="submit" id="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h1 id="feedback-heading">Feedbacks</h1>
+            <div class="feedbacks-container" onload="setDivHeight()">
+                <% if(feedback_list.length>0){ %>
+                    <% for(let i of feedback_list){ %>
+                        <div class="feedbacks">
+                            <div id="content">
+                                <p class="name"><%= i.name %></p>
+                                <p class="sub"><%= i.rate %></p>
+                                <p class="content"><%= i.feedback %></p>
+                            </div>
+                        </div>
+                        <% } %>
+                <% }else{ %>
+                        <h1 id="no-feedback">No Feedbacks Yet</h1>
+                    <% } %>
+            </div>
+        </div>
+    </div>  
+</main>
+<script src="/js/index.js"></script>

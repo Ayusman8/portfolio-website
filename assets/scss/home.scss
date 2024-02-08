@@ -1,0 +1,198 @@
+main{
+    #resume-download{
+        cursor: pointer;
+        right: 0;
+        top: 50%;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        i{
+            font-size: 1.2rem;
+            color: white;
+        }
+    }
+    #hover-message{
+        right: 48px;
+        top: 51%;
+        position: fixed;
+        width: 175px;
+        height: 30px;
+        background-color: black;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.6s;
+        opacity: 0;
+        span{
+            color: white;
+        }
+        :before{
+            position: absolute;
+            content: "";
+            height: 10px;
+            width: 10px;
+            background: black;
+            bottom: 10px;
+            right: -10;
+            transform: translateX(-50%) rotate(45deg);
+        }
+    }
+    #resume-download:hover + #hover-message{
+        opacity: 1;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    #profile{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 20px;
+        #img-holder{
+            max-width: 25%;
+            img{
+                width: 100%;
+                border-radius: 100%;
+            }
+        }
+        #info-holder{
+            width: 50%;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span{
+                color: #d8dadb;
+                font-size: 2rem;
+            }
+            #social-btn{
+                font-size: 2rem;
+                margin-top: 20px;
+                a{
+                    color: #d8dadb;
+                    padding-right: 10px;
+                }
+                a:hover{
+                    color: white;
+                    transition: 0.5s ;
+                }
+            }
+        }
+        @media(max-width: 900px){
+            #img-holder{
+                width: 50%;
+                max-width: 50%;
+            }
+            #info-holder{
+                width: 100%;
+                text-align: center;
+                .mtb-ptb{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .heading-container{
+        padding: 14px 8px; 
+        .heading{
+            font-weight: 100;
+            font-size: 2.5rem;
+            color: #07427c;
+        }          
+    }
+    #skills{
+        width: 100%;
+        padding: 24px 5%;
+        background-color: white;
+        #skill-container{
+            width: 100%;
+            margin: auto;
+            p{
+                padding: 14px 8px; 
+                font-size: 1.2rem;
+            }
+        }
+    }
+    #about{
+        width: 50%;
+        background-color: rgb(225,223,219);
+        padding: 24px 5%;
+        p{
+            padding: 14px 8px;
+            font-weight: 100;
+            word-spacing: 1px;
+            line-height: 1.8;
+        }
+    }
+    #achievement{
+        width: 50%;
+        background-color: rgb(225,223,219);
+        padding: 24px 5%;
+        ul{
+            padding: 14px 8px;
+            li{
+                padding: 14px 8px;
+            }
+        }
+    }
+    #info-section{
+        width: 100%;
+        padding: 24px 5%;
+        #info{
+            padding: 14px 8px;
+            p{
+                color: rgb(225,223,219);
+                padding: 14px 8px;
+                font-weight: 100;
+                word-spacing: 1px;
+                line-height: 1.8;
+            }
+        }
+    }
+    .experience-info{
+        display: flex;
+        flex-direction: column;
+        padding: 14px 0;
+        .duration{
+            font-size: small;
+            color: grey;
+            padding: 2px 0px;
+        }
+        .company-position{
+            font-size: large;
+            color: black;
+            padding: 2px 0px;
+        }
+    }
+    #experience{
+        width: 50%;
+        padding: 24px 5%;
+        background-color: white;
+    }
+    #education{
+        width: 50%;
+        padding: 24px 5%;
+        background-color: white;
+    }
+    @media(max-width: 900px){
+        #about{
+            width: 100%;
+        }
+        #achievement{
+            width: 100%;
+        }
+        #experience{
+            width: 100%;
+        }
+        #education{
+            width: 100%;
+        }
+    }
+}

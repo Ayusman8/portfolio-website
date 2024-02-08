@@ -1,0 +1,126 @@
+main {
+  width: 100%; }
+  main .center {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%; }
+    main .center .left {
+      width: 100%; }
+      main .center .left .feedback-form-container {
+        margin: 0 25%;
+        padding: 4% 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; }
+        main .center .left .feedback-form-container .heading {
+          font-size: 3rem; }
+        main .center .left .feedback-form-container p {
+          padding: 18px 0px; }
+        main .center .left .feedback-form-container .feedback-form form {
+          display: flex;
+          flex-direction: column; }
+          main .center .left .feedback-form-container .feedback-form form #feedback-star-container {
+            width: 70%;
+            display: flex;
+            justify-content: baseline;
+            align-items: baseline;
+            margin: 12px 0px; }
+            main .center .left .feedback-form-container .feedback-form form #feedback-star-container #feedback-star input {
+              display: none; }
+            main .center .left .feedback-form-container .feedback-form form #feedback-star-container #feedback-star label {
+              font-size: 30px;
+              color: #444;
+              padding: 10px;
+              float: right;
+              transition: all 0.2s ease; }
+            main .center .left .feedback-form-container .feedback-form form #feedback-star-container #feedback-star input:not(:checked) ~ label:hover,
+            main .center .left .feedback-form-container .feedback-form form #feedback-star-container #feedback-star input:not(:checked) ~ label:hover ~ label {
+              color: #fd4; }
+            main .center .left .feedback-form-container .feedback-form form #feedback-star-container #feedback-star input:checked ~ label {
+              color: #fd4; }
+            main .center .left .feedback-form-container .feedback-form form #feedback-star-container #feedback-star input#rate5:checked ~ label {
+              color: #e7eb24;
+              text-shadow: 0 0 20px #952; }
+          main .center .left .feedback-form-container .feedback-form form #rating-display {
+            width: 70%;
+            text-align: center;
+            padding: 12px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: all 0.2s ease; }
+          main .center .left .feedback-form-container .feedback-form form input {
+            padding: 10px 6px;
+            background: transparent;
+            border-radius: 4px;
+            border: 1px solid black;
+            font-size: 100%; }
+          main .center .left .feedback-form-container .feedback-form form label {
+            padding: 12px 0; }
+          main .center .left .feedback-form-container .feedback-form form button {
+            margin: 12px 0px;
+            padding: 12px 0px;
+            width: 20%;
+            border-radius: 4px;
+            background-color: #444;
+            color: white;
+            cursor: pointer; }
+          main .center .left .feedback-form-container .feedback-form form textarea {
+            background: transparent;
+            padding: 12px 8px;
+            font-size: 100%;
+            border-radius: 4px;
+            border: 1px solid black;
+            height: 20vh;
+            resize: none;
+            overflow: auto; }
+          main .center .left .feedback-form-container .feedback-form form textarea::-webkit-scrollbar {
+            width: 6px; }
+          main .center .left .feedback-form-container .feedback-form form textarea::-webkit-scrollbar-thumb {
+            background-color: #656565;
+            border-radius: 4px; }
+          main .center .left .feedback-form-container .feedback-form form textarea::-webkit-scrollbar-track {
+            background-color: #cbcbcb; }
+    main .center .right {
+      width: 100%;
+      padding: 48px 0; }
+      main .center .right #feedback-heading {
+        width: 100%;
+        padding: 24px 0;
+        margin: 12px 0;
+        text-align: center;
+        color: white;
+        background-color: black; }
+      main .center .right .feedbacks-container {
+        display: block;
+        width: 100%; }
+        main .center .right .feedbacks-container .feedbacks {
+          width: 50%;
+          margin: 12px 25%;
+          padding: 12px 0px; }
+          main .center .right .feedbacks-container .feedbacks #content {
+            padding: 0 24px;
+            width: 100%; }
+            main .center .right .feedbacks-container .feedbacks #content p {
+              padding: 4px 0;
+              text-align: left; }
+        main .center .right .feedbacks-container #no-feedback {
+          text-align: center;
+          padding-top: 50vh; }
+        main .center .right .feedbacks-container .feedbacks:nth-child(2n) {
+          background-color: black;
+          color: white;
+          border-radius: 30px; }
+        main .center .right .feedbacks-container .feedbacks:nth-child(2n+1) {
+          background-color: white;
+          border-radius: 30px;
+          border: 1px solid black; }
+  @media (max-width: 900px) {
+    main .center .left .feedback-form-container {
+      margin: 0 2%; }
+      main .center .left .feedback-form-container .heading {
+        font-size: 2rem; }
+    main .center .right .feedbacks-container .feedbacks {
+      margin: 12px 4%;
+      width: 90%; } }

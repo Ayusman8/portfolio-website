@@ -1,0 +1,156 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  main #resume-download {
+    cursor: pointer;
+    right: 0;
+    top: 50%;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
+    main #resume-download i {
+      font-size: 1.2rem;
+      color: white; }
+  main #hover-message {
+    right: 48px;
+    top: 51%;
+    position: fixed;
+    width: 175px;
+    height: 30px;
+    background-color: black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    opacity: 0; }
+    main #hover-message span {
+      color: white; }
+    main #hover-message :before {
+      position: absolute;
+      content: "";
+      height: 10px;
+      width: 10px;
+      background: black;
+      bottom: 10px;
+      right: -10;
+      transform: translateX(-50%) rotate(45deg); }
+  main #resume-download:hover + #hover-message {
+    opacity: 1; }
+  main #profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px; }
+    main #profile #img-holder {
+      max-width: 25%; }
+      main #profile #img-holder img {
+        width: 100%;
+        border-radius: 100%; }
+    main #profile #info-holder {
+      width: 50%;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      main #profile #info-holder span {
+        color: #d8dadb;
+        font-size: 2rem; }
+      main #profile #info-holder #social-btn {
+        font-size: 2rem;
+        margin-top: 20px; }
+        main #profile #info-holder #social-btn a {
+          color: #d8dadb;
+          padding-right: 10px; }
+        main #profile #info-holder #social-btn a:hover {
+          color: white;
+          transition: 0.5s; }
+    @media (max-width: 900px) {
+      main #profile #img-holder {
+        width: 50%;
+        max-width: 50%; }
+      main #profile #info-holder {
+        width: 100%;
+        text-align: center; }
+        main #profile #info-holder .mtb-ptb {
+          margin-top: 0; } }
+  main .heading-container {
+    padding: 14px 8px; }
+    main .heading-container .heading {
+      font-weight: 100;
+      font-size: 2.5rem;
+      color: #07427c; }
+  main #skills {
+    width: 100%;
+    padding: 24px 5%;
+    background-color: white; }
+    main #skills #skill-container {
+      width: 100%;
+      margin: auto; }
+      main #skills #skill-container p {
+        padding: 14px 8px;
+        font-size: 1.2rem; }
+  main #about {
+    width: 50%;
+    background-color: #e1dfdb;
+    padding: 24px 5%; }
+    main #about p {
+      padding: 14px 8px;
+      font-weight: 100;
+      word-spacing: 1px;
+      line-height: 1.8; }
+  main #achievement {
+    width: 50%;
+    background-color: #e1dfdb;
+    padding: 24px 5%; }
+    main #achievement ul {
+      padding: 14px 8px; }
+      main #achievement ul li {
+        padding: 14px 8px; }
+  main #info-section {
+    width: 100%;
+    padding: 24px 5%; }
+    main #info-section #info {
+      padding: 14px 8px; }
+      main #info-section #info p {
+        color: #e1dfdb;
+        padding: 14px 8px;
+        font-weight: 100;
+        word-spacing: 1px;
+        line-height: 1.8; }
+  main .experience-info {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 0; }
+    main .experience-info .duration {
+      font-size: small;
+      color: grey;
+      padding: 2px 0px; }
+    main .experience-info .company-position {
+      font-size: large;
+      color: black;
+      padding: 2px 0px; }
+  main #experience {
+    width: 50%;
+    padding: 24px 5%;
+    background-color: white; }
+  main #education {
+    width: 50%;
+    padding: 24px 5%;
+    background-color: white; }
+  @media (max-width: 900px) {
+    main #about {
+      width: 100%; }
+    main #achievement {
+      width: 100%; }
+    main #experience {
+      width: 100%; }
+    main #education {
+      width: 100%; } }

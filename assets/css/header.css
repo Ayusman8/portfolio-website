@@ -1,0 +1,48 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: transparent; }
+  header nav {
+    display: flex;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px; }
+    header nav a {
+      font-size: 18px;
+      color: #d8dadb;
+      text-decoration: none; }
+    header nav #username {
+      font-size: 25px; }
+    header nav #click {
+      display: none; }
+    header nav #menu-btn {
+      cursor: pointer;
+      font-size: 25px;
+      display: none;
+      color: #d8dadb; }
+    header nav ul {
+      display: flex; }
+      header nav ul li {
+        list-style: none;
+        margin: 0 10px; }
+  @media (max-width: 900px) {
+    header nav {
+      z-index: 1; }
+      header nav #menu-btn {
+        display: block; }
+      header nav ul {
+        position: fixed;
+        display: block;
+        width: 50%;
+        left: -100%;
+        background-color: black;
+        text-align: center;
+        height: 100%;
+        margin-top: 40px;
+        transition: all 0.3s ease; }
+        header nav ul li {
+          padding: 12px 0; }
+      header nav #click:checked ~ ul {
+        left: 0%; } }
